@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="google-adsense-account" content="ca-pub-3128959008077064">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3128959008077064" crossorigin="anonymous"></script>
+<title>Whirl: Free Spinning Wheel for Colors, Numbers and Names</title>
+<meta name="description" content="Spin a free online wheel to pick a random color, number, or name. Build custom wheels with weighted odds, save them, and test fairness. No sign-up.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://whirl0.netlify.app/">
+<meta name="theme-color" content="#FF3D81">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 16V2a14 14 0 0 1 14 14z' fill='%233B4CFF'/%3E%3Cpath d='M16 16h14a14 14 0 0 1-14 14z' fill='%23FF6B9D'/%3E%3Cpath d='M16 16v14A14 14 0 0 1 2 16z' fill='%23FFD84D'/%3E%3Cpath d='M16 16H2A14 14 0 0 1 16 2z' fill='%235BD6A5'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23fff'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Whirl">
+<meta property="og:title" content="Whirl: Free Spinning Wheel for Colors, Numbers and Names">
+<meta property="og:description" content="Spin a free online wheel to pick a random color, number, or name. Custom wheels, weighted odds, and a fairness test.">
+<meta property="og:url" content="https://whirl0.netlify.app/">
+<meta property="og:image" content="https://whirl0.netlify.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A colorful spinning wheel with the Whirl logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Whirl: Free Spinning Wheel for Colors, Numbers and Names">
+<meta name="twitter:description" content="Spin a free online wheel to pick a random color, number, or name.">
+<meta name="twitter:image" content="https://whirl0.netlify.app/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://whirl0.netlify.app/#site","url":"https://whirl0.netlify.app/","name":"Whirl","inLanguage":"en"},{"@type":"WebApplication","name":"Whirl","url":"https://whirl0.netlify.app/","description":"A free online spinning wheel that picks a random color, a random number, or one item from your own list.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["Random color wheel","Random number wheel","Custom list wheel","Weighted odds","Saved wheels","Fairness test"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Whirl?","acceptedAnswer":{"@type":"Answer","text":"Whirl is a free online spinning wheel. Spin it to pick a random color, a random number from any range, or one item from your own list of names, foods, or ideas."}},{"@type":"Question","name":"How do I pick a random color?","acceptedAnswer":{"@type":"Answer","text":"Open the Colors tab, choose a palette and how many colors you want, then press Spin. The wheel lands on one color and shows its hex code and closest name."}},{"@type":"Question","name":"How do I pick a random number?","acceptedAnswer":{"@type":"Answer","text":"Open the Numbers tab, set the From and To values, and press Spin. For big ranges the wheel shows a random sample of numbers."}},{"@type":"Question","name":"Can I make a wheel with my own names or choices?","acceptedAnswer":{"@type":"Answer","text":"Yes. In the Anything tab, type one item per line. You can save wheels in your browser and load them later."}},{"@type":"Question","name":"How do weighted odds work?","acceptedAnswer":{"@type":"Answer","text":"Add x and a number after an item, like Pizza x3. Its slice becomes three times bigger and three times as likely to win."}},{"@type":"Question","name":"Is the wheel really random?","acceptedAnswer":{"@type":"Answer","text":"The Spin buttons use your browser’s secure random number generator. The fairness test runs 1,000 spins so you can compare results to the expected odds. If you flick the wheel by hand, the result depends on your flick."}},{"@type":"Question","name":"Is Whirl free, and is my data private?","acceptedAnswer":{"@type":"Answer","text":"Whirl is free. Your lists, saved wheels, and history stay in your browser and are not uploaded."}}]}]}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@600;700;800&display=swap">
+<style>
+:root{--bg:#ECEBFF;--ink:#17143F;--mut:#5B5890;--card:#fff;--line:#CFCCF5;--acc:#3B4CFF;--accink:#fff;--gold:#FFC93C;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#100E2A;--ink:#F1F0FF;--mut:#A9A6D6;--card:#1B1840;--line:#332F6E;--acc:#7C8BFF;--accink:#0E0C26}}
+:root[data-theme="dark"]{--bg:#100E2A;--ink:#F1F0FF;--mut:#A9A6D6;--card:#1B1840;--line:#332F6E;--acc:#7C8BFF;--accink:#0E0C26}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.55 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font-weight:800;font-size:1.5rem;letter-spacing:-.03em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:26px;height:26px;border-radius:50%;background:conic-gradient(#3B4CFF 0 25%,#FF4F8B 0 50%,#FFC93C 0 75%,#16C79A 0);display:block}
+nav a{margin-left:20px;text-decoration:none;color:var(--mut);font-weight:600}
+nav a:hover{color:var(--ink)}
+.stage{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center;padding:12px 0 72px}
+.wheelwrap{position:relative;width:100%;max-width:560px;aspect-ratio:1;margin:0 auto}
+#wheel{width:100%;height:100%;display:block;cursor:pointer;border-radius:50%;filter:drop-shadow(0 18px 30px rgba(23,20,63,.28))}
+.pointer{position:absolute;left:50%;top:-10px;width:38px;height:46px;transform:translateX(-50%);background:var(--gold);clip-path:polygon(50% 100%,0 0,100% 0);z-index:2;filter:drop-shadow(0 2px 0 rgba(23,20,63,.6))}
+.hub{position:absolute;left:50%;top:50%;width:21%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:5px solid var(--card);background:var(--acc);color:var(--accink);font:800 clamp(.9rem,2.6vw,1.3rem)/1 inherit;font-family:inherit;cursor:pointer;box-shadow:0 6px 16px rgba(23,20,63,.35)}
+.hub:disabled,.go:disabled{opacity:.55;cursor:not-allowed}
+h1{font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin:0 0 10px}
+.lede{color:var(--mut);margin:0 0 22px;max-width:46ch}
+.tabs{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);padding:5px;border-radius:14px;margin-bottom:14px}
+.tabs button{flex:1;border:0;background:none;color:var(--mut);font:600 1rem inherit;font-family:inherit;padding:10px;border-radius:10px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--acc);color:var(--accink)}
+.pane{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:12px}
+label{display:grid;gap:4px;font-weight:600;font-size:.95rem}
+label small{font-weight:400;color:var(--mut)}
+input[type=number],select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px 11px}
+textarea{min-height:140px;resize:vertical}
+input[type=range]{width:100%;accent-color:var(--acc)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.check{display:flex;align-items:center;gap:8px;font-weight:400}
+.btn{font:600 .95rem inherit;font-family:inherit;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:8px 14px;cursor:pointer}
+.go{width:100%;margin-top:14px;font:800 1.25rem inherit;font-family:inherit;border:0;background:var(--acc);color:var(--accink);border-radius:14px;padding:15px;cursor:pointer;box-shadow:0 5px 0 rgba(23,20,63,.35)}
+.go:active:not(:disabled){transform:translateY(3px);box-shadow:0 2px 0 rgba(23,20,63,.35)}
+.result{margin-top:14px;display:flex;align-items:center;gap:14px;min-height:76px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 16px}
+.sw{width:48px;height:48px;border-radius:12px;flex:none;border:2px solid var(--line)}
+.result b{font-size:1.7rem;letter-spacing:-.02em;line-height:1.1;overflow-wrap:anywhere;flex:1}
+.result span.hint{color:var(--mut)}
+.hist{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--card);padding:4px 11px 4px 6px;border-radius:99px;font-size:.9rem}
+.chip i{width:14px;height:14px;border-radius:50%;display:block}
+section.block{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem);letter-spacing:-.03em;line-height:1.1;margin:0 0 8px}
+.ideas{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px;margin-top:22px}
+.idea{text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;border-radius:14px;padding:14px 16px;cursor:pointer}
+.idea:hover{border-color:var(--acc)}
+.idea b{display:block;font-size:1.1rem}
+.idea span{color:var(--mut);font-size:.9rem}
+.fair{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:20px}
+.fair p{margin:4px 0 0;color:var(--mut);max-width:38ch}
+.fair h3{margin:0;font-size:1.15rem}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);font-size:.9rem}
+@media (max-width:900px){.stage{grid-template-columns:1fr;gap:30px}.fair{grid-template-columns:1fr}nav a:first-child{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root{--bg:#FFE6F0;--ink:#3A1450;--mut:#8A5FA3;--card:rgba(255,255,255,.72);--line:rgba(255,255,255,.9);--acc:#FF3D81;--accink:#fff;--field:#fff;--blob:1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2A0F45;--ink:#FFEAF5;--mut:#D2A8E6;--card:rgba(255,255,255,.09);--line:rgba(255,255,255,.14);--acc:#FF6FA3;--accink:#2A0F45;--field:rgba(255,255,255,.12);--blob:.3}}
+:root[data-theme="dark"]{--bg:#2A0F45;--ink:#FFEAF5;--mut:#D2A8E6;--card:rgba(255,255,255,.09);--line:rgba(255,255,255,.14);--acc:#FF6FA3;--accink:#2A0F45;--field:rgba(255,255,255,.12);--blob:.3}
+body{font-family:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:600}
+body::before{content:"";position:fixed;inset:0;z-index:-1;opacity:var(--blob);background:radial-gradient(520px 420px at 8% 12%,#FFD6A5,transparent 70%),radial-gradient(560px 460px at 92% 18%,#BDE3FF,transparent 70%),radial-gradient(600px 500px at 70% 95%,#D9C7FF,transparent 70%),radial-gradient(420px 360px at 12% 88%,#C4F5DD,transparent 70%)}
+h1,h2,h3,.logo,.hub,.go,.tabs button,.result b,.idea b{font-family:"Fredoka",system-ui,sans-serif}
+h1{font-weight:600;letter-spacing:-.01em;line-height:1.06}
+h2{font-weight:600;letter-spacing:-.01em}
+.logo{font-weight:600;letter-spacing:0}
+nav a{font-weight:700}
+.tabs{background:var(--card);border:0;border-radius:99px;padding:6px;box-shadow:0 8px 24px rgba(160,60,140,.12);backdrop-filter:blur(10px)}
+.tabs button{border-radius:99px;font-weight:500;font-size:1.05rem}
+.tabs button[aria-selected="true"]{background:var(--acc);box-shadow:0 4px 12px rgba(255,61,129,.4)}
+.pane{background:var(--card);border:0;border-radius:28px;padding:22px;box-shadow:0 18px 40px rgba(150,60,140,.14);backdrop-filter:blur(12px)}
+input[type=number],select,textarea{background:var(--field);border:2px solid transparent;border-radius:14px;color:var(--ink)}
+input[type=number]:focus,select:focus,textarea:focus{border-color:var(--acc);outline:0}
+.btn{border:0;border-radius:99px;background:var(--field);color:var(--ink);font-weight:700;box-shadow:0 2px 0 rgba(150,60,140,.2)}
+.go{border-radius:99px;font-weight:600;font-size:1.4rem;color:#fff;background:linear-gradient(180deg,#FF7DAE,#FF3D81);box-shadow:0 6px 0 #C71F5F,0 14px 24px rgba(255,61,129,.35)}
+.go:active:not(:disabled){transform:translateY(4px);box-shadow:0 2px 0 #C71F5F}
+.hub{background:#fff;color:#FF3D81;border:6px solid #FF3D81;font-weight:600;box-shadow:0 0 0 6px #fff,0 8px 20px rgba(150,40,100,.4)}
+.pointer{top:-6px;width:46px;height:54px;background:#FF3D81;filter:drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 -2px 0 #fff) drop-shadow(0 4px 4px rgba(80,20,80,.45))}
+#wheel{filter:drop-shadow(0 24px 30px rgba(150,40,120,.35))}
+.result{background:var(--card);border:0;border-radius:24px;box-shadow:0 10px 28px rgba(150,60,140,.14);backdrop-filter:blur(10px)}
+.result b{font-weight:600}
+.sw{border:3px solid #fff;border-radius:50%;box-shadow:0 3px 8px rgba(0,0,0,.18)}
+.chip{border:0;background:var(--card);font-weight:700}
+.chip i{border:2px solid #fff}
+section.block{border-top:0;padding:64px 0}
+.idea{border:0;border-radius:26px;padding:20px;color:#3A1450;box-shadow:0 10px 22px rgba(150,60,140,.12);transition:transform .15s}
+.idea:hover{transform:translateY(-4px) rotate(-1deg)}
+.idea span{color:rgba(58,20,80,.7);font-weight:600}
+.idea::before{display:block;font-size:2rem;margin-bottom:6px;line-height:1.2}
+.idea:nth-child(1){background:#FFD9B8}.idea:nth-child(1)::before{content:"🍕"}
+.idea:nth-child(2){background:#E4D3FF}.idea:nth-child(2)::before{content:"🎭"}
+.idea:nth-child(3){background:#C9F2DF}.idea:nth-child(3)::before{content:"✨"}
+.idea:nth-child(4){background:#BFE3FF}.idea:nth-child(4)::before{content:"🏁"}
+.idea:nth-child(5){background:#FFC9DC}.idea:nth-child(5)::before{content:"🌴"}
+.idea:nth-child(6){background:#FFF0A8}.idea:nth-child(6)::before{content:"🪙"}
+.idea:nth-child(7){background:#FFD0C9}.idea:nth-child(7)::before{content:"🎲"}
+.idea:nth-child(8){background:#D5E8FF}.idea:nth-child(8)::before{content:"💯"}
+.fair>div::before{display:block;font-size:2rem;margin-bottom:6px}
+.fair>div:nth-child(1)::before{content:"🎯"}.fair>div:nth-child(2)::before{content:"🔒"}.fair>div:nth-child(3)::before{content:"📱"}
+.fair h3{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:1.3rem}
+footer{border-top:0;text-align:center}
+.pointer{transform-origin:50% 12%}
+#wheel{touch-action:none;cursor:grab}#wheel:active{cursor:grabbing}
+.go,.btn,.tabs button,.idea{transition:transform .15s,box-shadow .15s,background .2s}
+.hub:not(:disabled){animation:breathe 2.4s ease-in-out infinite}
+.hub:active:not(:disabled){animation:none;transform:translate(-50%,-50%) scale(.92)}
+@keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.07)}}
+.pane:not([hidden]){animation:paneIn .35s ease-out}
+@keyframes paneIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.go:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 8px 0 #C71F5F,0 18px 28px rgba(255,61,129,.4)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(1px)}
+.tabs button:hover:not([aria-selected="true"]){background:rgba(255,61,129,.12);color:var(--ink)}
+.logo:hover i{animation:spinlogo 1s ease-in-out}
+@keyframes spinlogo{to{transform:rotate(1turn)}}
+@media (prefers-reduced-motion:reduce){.hub:not(:disabled),.pane:not([hidden]),.logo:hover i{animation:none}.fr .bar{transition:none}}
+input[type=text]{width:100%;font:inherit;color:var(--ink);background:var(--field);border:2px solid transparent;border-radius:14px;padding:9px 11px}
+input[type=text]:focus{border-color:var(--acc);outline:0}
+.saved{display:flex;gap:8px;align-items:center}.saved input,.saved select{flex:1;min-width:0}.saved .btn{flex:none}.btn:disabled{opacity:.5;cursor:not-allowed}
+.opts{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:12px}
+.keys{display:block;margin-top:10px;color:var(--mut)}
+.fairout{margin-top:12px;background:var(--card);border-radius:20px;padding:14px;box-shadow:0 10px 28px rgba(150,60,140,.14)}
+.fr{display:grid;grid-template-columns:84px 1fr 52px;gap:8px;align-items:center;font-size:.85rem;margin:5px 0}
+.fr .lb{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
+.fr .tr{position:relative;height:14px;background:var(--field);border-radius:99px;overflow:hidden}
+.fr i{display:block}.fr .bar{height:100%;width:0;border-radius:99px;transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.fr .ex{position:absolute;top:0;bottom:0;width:3px;background:var(--ink);opacity:.6}
+.fr .pc{text-align:right;font-weight:700}
+.ad{margin:8px auto 28px;max-width:728px;text-align:center}
+.ad small{display:block;color:var(--mut);font-size:.75rem;margin-bottom:4px}
+.ad .ph{min-height:90px;display:grid;place-items:center;border:2px dashed rgba(138,95,163,.45);border-radius:16px;color:var(--mut);font-weight:700}
+.consent{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:640px;margin:0 auto;background:var(--bg);color:var(--ink);border-radius:20px;padding:14px 16px;box-shadow:0 12px 40px rgba(60,10,80,.35);z-index:60;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.consent span{flex:1 1 240px;font-weight:700}
+.faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin-top:20px}
+.faq h3{margin:0;font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:1.2rem}
+.faq p{margin:4px 0 0;color:var(--mut)}
+.idea:nth-child(9){background:#FFE0B5}.idea:nth-child(9)::before{content:"🎁"}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="logo" href="#spin"><i></i>Whirl</a>
+  <nav><a href="#spin">Spin</a><a href="#ideas">Ideas</a><a href="#fair">Fair play</a></nav>
+</header>
+<main>
+<noscript><p class="lede">Whirl needs JavaScript to spin the wheel. Please turn it on to pick a random color, number, or name.</p></noscript>
+<section class="stage" id="spin">
+  <div class="wheelwrap">
+    <div class="pointer" aria-hidden="true"></div>
+    <canvas id="wheel" aria-label="Spinning wheel. Click to spin."></canvas>
+    <button class="hub" id="hub" type="button">Spin</button>
+  </div>
+  <div>
+    <h1>Spin the wheel for colors, numbers, or anything</h1>
+    <p class="lede">A free online spinning wheel. Pick a random color, a number from any range, or one name from your own list.</p>
+    <div class="tabs" role="tablist" aria-label="What to spin">
+      <button role="tab" id="t-colors" aria-selected="true" data-mode="colors">Colors</button>
+      <button role="tab" id="t-numbers" aria-selected="false" data-mode="numbers">Numbers</button>
+      <button role="tab" id="t-anything" aria-selected="false" data-mode="anything">Anything</button>
+    </div>
+    <div class="pane" data-pane="colors">
+      <label>Palette
+        <select id="palette"><option value="vivid">Vivid</option><option value="pastel">Pastel</option><option value="deep">Deep</option></select>
+      </label>
+      <label>Colors on the wheel: <span id="cN">8</span><input type="range" id="cCount" min="3" max="16" value="8"></label>
+      <button class="btn" id="cNew" type="button">Shuffle new colors</button>
+    </div>
+    <div class="pane" data-pane="numbers" hidden>
+      <div class="row">
+        <label>From<input type="number" id="nMin" value="1"></label>
+        <label>To<input type="number" id="nMax" value="100"></label>
+      </div>
+      <label>Numbers on the wheel: <span id="nN">12</span><input type="range" id="nCount" min="2" max="24" value="12">
+        <small>With a big range, the wheel shows a random sample and each spin lands on one of them.</small></label>
+      <button class="btn" id="nNew" type="button">Shuffle new numbers</button>
+    </div>
+    <div class="pane" data-pane="anything" hidden>
+      <label>Your list, one item per line
+        <textarea id="list" spellcheck="false">Pizza
+Tacos
+Sushi
+Burgers
+Ramen
+Salad</textarea>
+        <small id="listInfo"></small>
+      </label>
+      <label class="check"><input type="checkbox" id="rm"> Remove the winner after each spin</label>
+      <div class="saved"><input type="text" id="svName" placeholder="Name this wheel" maxlength="30" aria-label="Wheel name"><button class="btn" id="svBtn" type="button">Save wheel</button></div>
+      <div class="saved"><select id="svList" aria-label="Saved wheels"></select><button class="btn" id="svLoad" type="button">Load</button><button class="btn" id="svDel" type="button">Delete</button></div>
+    </div>
+    <button class="go" id="go" type="button">Spin the wheel</button>
+    <div class="result" aria-live="polite" id="res"><span class="hint">Your result shows up here.</span></div>
+    <div class="hist" id="hist"></div>
+    <div class="opts"><label class="check"><input type="checkbox" id="snd" checked> Tick sound</label><label class="check"><input type="checkbox" id="say"> Read the winner aloud</label></div>
+    <button class="btn" id="fairBtn" type="button" style="margin-top:12px">Test fairness with 1,000 spins</button>
+    <div id="fairOut" class="fairout" hidden></div>
+    <small class="keys">Tip: press Space to spin.</small>
+  </div>
+</section>
+
+<div class="ad" data-slot="top"></div>
+<section class="block" id="ideas">
+  <h2>Start from an idea</h2>
+  <p class="lede" style="margin:0">Choose one and the wheel loads it for you. Edit anything you like afterward.</p>
+  <div class="ideas" id="ideaGrid"></div>
+</section>
+
+<div class="ad" data-slot="mid"></div>
+<section class="block" id="fair">
+  <h2>Fair play, built in</h2>
+  <div class="fair">
+    <div><h3>True randomness</h3><p>The Spin buttons use your browser’s secure random generator. If you flick the wheel yourself, the result is up to your thumb.</p></div>
+    <div><h3>Private by default</h3><p>Your lists never leave this page. Nothing is uploaded or saved.</p></div>
+    <div><h3>Works anywhere</h3><p>Click the wheel, press the center button, or use the Spin button on any screen size.</p></div>
+  </div>
+</section>
+<section class="block" id="faq">
+  <h2>Questions about spinning the wheel</h2>
+  <div class="faq">
+    <div><h3>What is Whirl?</h3><p>Whirl is a free online spinning wheel. Spin it to pick a random color, a random number from any range, or one item from your own list of names, foods, or ideas.</p></div>
+    <div><h3>How do I pick a random color?</h3><p>Open the Colors tab, choose a palette and how many colors you want, then press Spin. The wheel lands on one color and shows its hex code and closest name.</p></div>
+    <div><h3>How do I pick a random number?</h3><p>Open the Numbers tab, set the From and To values, and press Spin. For big ranges the wheel shows a random sample of numbers.</p></div>
+    <div><h3>Can I make a wheel with my own names or choices?</h3><p>Yes. In the Anything tab, type one item per line. You can save wheels in your browser and load them later.</p></div>
+    <div><h3>How do weighted odds work?</h3><p>Add x and a number after an item, like Pizza x3. Its slice becomes three times bigger and three times as likely to win.</p></div>
+    <div><h3>Is the wheel really random?</h3><p>The Spin buttons use your browser’s secure random number generator. The fairness test runs 1,000 spins so you can compare results to the expected odds. If you flick the wheel by hand, the result depends on your flick.</p></div>
+    <div><h3>Is Whirl free, and is my data private?</h3><p>Whirl is free. Your lists, saved wheels, and history stay in your browser and are not uploaded.</p></div>
+  </div>
+</section>
+<section class="block" id="privacy">
+  <h2>Privacy and ads</h2>
+  <p class="lede" style="margin:0 0 12px">Your lists, saved wheels and spin history stay in your browser. Whirl never uploads them.</p>
+  <p class="lede" style="margin:0 0 14px">Ads on this site come from advertising partners, which may use cookies to show and measure ads. Where the law requires it, you will see a choice message from Google about cookies and personalized ads.</p>
+  <button class="btn" id="adChoices" type="button" hidden>Change ad choices</button>
+</section>
+<div class="ad" data-slot="bottom"></div>
+</main>
+<footer>Whirl: spin colors, numbers, or anything. <a href="#privacy">Privacy and ads</a></footer>
+</div>
+
+<script>
+/* ===== AD SETTINGS: fill these in when you host the site on your own domain ===== */
+var ADS={client:"ca-pub-3128959008077064",slots:{top:"",mid:"",bottom:""},preview:false,ownBanner:false};
+/* client: your AdSense publisher ID, like ca-pub-1234567890123456
+   slots: the ad unit ID for each spot, like "1234567890"
+   preview: true shows gray "Ad space" boxes so you can see the layout. Set false when ads are live. */
+(function(){
+var TAU=Math.PI*2,$=function(s){return document.querySelector(s)};
+var SET=["#FF6B9D","#FFB84D","#5BD6A5","#6C8CFF","#B77BFF","#FF8F6B","#4FD1E8","#FFD84D"];
+var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var mode="colors",items=[],rot=0,spinning=false,hist=[],ac=null,lines=[],win=-1,winP=0,ptr=$(".pointer"),sweeping=0,sweepEnd=null,cum=[0];
+function R(){return crypto.getRandomValues(new Uint32Array(1))[0]/4294967296}
+function hsl(h,s,l){s/=100;l/=100;var a=s*Math.min(l,1-l);function f(n){var k=(n+h/30)%12;return l-a*Math.max(-1,Math.min(k-3,Math.min(9-k,1)))}
+return "#"+[f(0),f(8),f(4)].map(function(x){return Math.round(x*255).toString(16).padStart(2,"0")}).join("").toUpperCase()}
+function txt(hex){var r=parseInt(hex.substr(1,2),16),g=parseInt(hex.substr(3,2),16),b=parseInt(hex.substr(5,2),16);return (.299*r+.587*g+.114*b)>150?"#17143F":"#FFFFFF"}
+function segColor(i,n){return (i===n-1&&n>1&&i%8===0)?SET[3]:SET[i%8]}
+
+function build(){
+  if(mode==="colors"){
+    var n=+$("#cCount").value,p=$("#palette").value,off=R()*360,P={vivid:[88,55],pastel:[78,82],deep:[65,34]}[p];
+    $("#cN").textContent=n;items=[];
+    for(var i=0;i<n;i++){var hex=hsl((off+i*360/n+(R()-.5)*(180/n))%360,P[0],P[1]+(i%2?4:-3));items.push({label:hex,color:hex})}
+  }else if(mode==="numbers"){
+    var a=Math.floor(+$("#nMin").value||0),b=Math.floor(+$("#nMax").value||0);if(a>b){var t=a;a=b;b=t}
+    var k=+$("#nCount").value;$("#nN").textContent=k;var size=b-a+1,nums=[];
+    if(size<=k){for(var j=a;j<=b;j++)nums.push(j)}
+    else{var S={};while(nums.length<k){var v=a+Math.floor(R()*size);if(!S[v]){S[v]=1;nums.push(v)}}nums.sort(function(x,y){return x-y})}
+    items=nums.map(function(v,i){return{label:String(v),color:segColor(i,nums.length)}});
+  }else{
+    lines=$("#list").value.split("\n").map(function(s){return s.trim()}).filter(Boolean).slice(0,40);
+    items=lines.map(function(s,i){var m=s.match(/^(.*\S)\s+[x×*]\s*(\d{1,2})$/i),wt=m?Math.max(1,Math.min(20,+m[2])):1;return{label:m?m[1]:s,raw:s,wt:wt,color:segColor(i,lines.length),line:i}});
+    $("#listInfo").textContent=lines.length<2?"Add at least 2 items to spin.":lines.length+" items on the wheel (max 40). Tip: write Pizza x3 to make it three times as likely.";
+  }
+  win=-1;layout();var ok=items.length>=2;$("#go").disabled=!ok||spinning;$("#hub").disabled=!ok||spinning;draw();
+}
+
+var cv=$("#wheel"),ctx=cv.getContext("2d");
+function idxAt(r){var a=(((-Math.PI/2-r)%TAU)+TAU)%TAU;for(var i=0;i<items.length;i++)if(a<cum[i+1])return i;return items.length-1}
+function draw(){
+  var dpr=Math.min(window.devicePixelRatio||1,2),w=cv.clientWidth||520,S=Math.round(w*dpr);
+  if(cv.width!==S){cv.width=S;cv.height=S}
+  var c=S/2,r=c-26*dpr,n=items.length,card="#fff";
+  ctx.clearRect(0,0,S,S);
+  if(n<2){ctx.fillStyle="#CFCCF5";ctx.beginPath();ctx.arc(c,c,r,0,TAU);ctx.fill();return}
+  var arc=TAU/n,fam='"Fredoka",system-ui,sans-serif';
+  for(var i=0;i<n;i++){
+    var s=rot+cum[i],arc=cum[i+1]-cum[i];
+    ctx.globalAlpha=(win>=0&&i!==win)?1-.5*winP:1;ctx.beginPath();ctx.moveTo(c,c);ctx.arc(c,c,r,s,s+arc);ctx.closePath();
+    ctx.fillStyle=items[i].color;ctx.fill();ctx.lineWidth=2*dpr;ctx.strokeStyle=card;ctx.stroke();
+    ctx.save();ctx.translate(c,c);ctx.rotate(s+arc/2);ctx.fillStyle=txt(items[i].color);ctx.textAlign="right";ctx.textBaseline="middle";
+    var label=items[i].label;if(label.length>20)label=label.slice(0,19)+"…";
+    var fs=Math.min(r*.1,arc*r*.42);fs=Math.max(fs,9*dpr);ctx.font="800 "+fs+"px "+fam;
+    var maxW=r*.6;while(ctx.measureText(label).width>maxW&&fs>8*dpr){fs-=1*dpr;ctx.font="800 "+fs+"px "+fam}
+    ctx.fillText(label,r-r*.07,0);ctx.restore();ctx.globalAlpha=1;
+  }
+  if(win>=0&&win<n){var ws=rot+cum[win],wa=cum[win+1]-cum[win];ctx.beginPath();ctx.moveTo(c,c);ctx.arc(c,c,r,ws,ws+wa);ctx.closePath();ctx.fillStyle="rgba(255,255,255,"+(.3*winP)+")";ctx.fill();ctx.lineWidth=5*dpr*winP;ctx.strokeStyle="#fff";ctx.stroke()}
+  var gl=ctx.createRadialGradient(c-r*.25,c-r*.3,r*.05,c,c,r);gl.addColorStop(0,"rgba(255,255,255,.32)");gl.addColorStop(.6,"rgba(255,255,255,0)");gl.addColorStop(1,"rgba(80,0,60,.12)");
+  ctx.beginPath();ctx.arc(c,c,r,0,TAU);ctx.fillStyle=gl;ctx.fill();
+  var o=c-5*dpr,m=(r+o)/2;ctx.beginPath();ctx.arc(c,c,m,0,TAU);ctx.lineWidth=o-r;ctx.strokeStyle="#fff";ctx.stroke();
+  ctx.beginPath();ctx.arc(c,c,r,0,TAU);ctx.lineWidth=3*dpr;ctx.strokeStyle="#FF3D81";ctx.stroke();
+  var nb=28,ph=Math.abs(Math.floor(rot*4))%2;for(var q=0;q<nb;q++){var an=q/nb*TAU;ctx.beginPath();ctx.arc(c+Math.cos(an)*m,c+Math.sin(an)*m,5*dpr,0,TAU);ctx.fillStyle=((q+ph)%2)?"#FFC53D":"#FF6FA3";ctx.fill()}
+}
+
+function tick(){
+  if(!reduce&&ptr.animate)ptr.animate([{transform:"translateX(-50%) rotate(0)"},{transform:"translateX(-50%) rotate(-24deg)"},{transform:"translateX(-50%) rotate(0)"}],{duration:90});
+  if(!$("#snd").checked||!ac)return;
+  try{var t=ac.currentTime;if(t-(tick.l||0)<.03)return;tick.l=t;
+  var o=ac.createOscillator(),g=ac.createGain();o.type="sine";o.frequency.setValueAtTime(640,t);o.frequency.exponentialRampToValueAtTime(300,t+.05);
+  g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.14,t+.003);g.gain.exponentialRampToValueAtTime(.0001,t+.07);
+  o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+.08)}catch(e){}
+}
+function setBusy(b){spinning=b;var ok=items.length>=2;$("#go").disabled=b||!ok;$("#hub").disabled=b||!ok;
+  $("#go").textContent=b?"Spinning…":"Spin the wheel"}
+
+function spin(){
+  if(spinning||items.length<2)return;
+  try{ac=ac||new (window.AudioContext||window.webkitAudioContext)()}catch(e){}
+  setBusy(true);win=-1;
+  var start=rot,extra=TAU*(5+Math.floor(R()*3))+R()*TAU,dur=reduce?900:5200,t0=performance.now(),last=idxAt(rot);
+  (function f(t){
+    var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,4);rot=start+extra*e;
+    var i=idxAt(rot);if(i!==last){last=i;tick()}
+    draw();if(p<1)requestAnimationFrame(f);else done();
+  })(t0);
+}
+function done(){
+  var wi=idxAt(rot),w=items[wi];setBusy(false);
+  var res=$("#res");res.innerHTML="";
+  var sw=document.createElement("span");sw.className="sw";sw.style.background=w.color;
+  var b=document.createElement("b");b.textContent=w.label;
+  if(mode==="colors"){var sm=document.createElement("small");sm.textContent="Closest name: "+cname(w.color);sm.style.cssText="display:block;font-size:.9rem;color:var(--mut);font-weight:700";b.appendChild(sm)}
+  var cp=document.createElement("button");cp.className="btn";cp.type="button";cp.textContent="Copy";
+  cp.onclick=function(){try{navigator.clipboard.writeText(w.label).then(function(){cp.textContent="Copied"},function(){cp.textContent="Select and copy"})}catch(e){cp.textContent="Select and copy"}};
+  res.appendChild(sw);res.appendChild(b);res.appendChild(cp);
+  if(!reduce){res.animate([{transform:"scale(.85)",opacity:0},{transform:"scale(1.04)",opacity:1},{transform:"scale(1)"}],{duration:420,easing:"ease-out"});sw.animate([{transform:"rotate(-180deg) scale(.2)"},{transform:"rotate(0) scale(1.2)"},{transform:"rotate(0) scale(1)"}],{duration:560,easing:"ease-out"})}
+  hist.unshift(w);hist=hist.slice(0,12);renderHist();celebrate(wi,w.color);chime();
+  if($("#say").checked&&window.speechSynthesis){try{speechSynthesis.cancel();speechSynthesis.speak(new SpeechSynthesisUtterance(mode==="colors"?cname(w.color):w.label))}catch(e){}}
+  if(mode==="anything"&&$("#rm").checked&&w.line!=null)setTimeout(function(){if(spinning||lines[w.line]!==w.raw)return;lines.splice(w.line,1);$("#list").value=lines.join("\n");build()},reduce?0:1900);
+}
+function celebrate(i,col){
+  win=i;if(reduce){winP=1;draw();return}
+  var t0=performance.now();
+  (function f(t){var k=t-t0;winP=k<260?k/260:.85+.15*Math.cos((k-260)/130);draw();if(win!==i)return;if(k<1900)requestAnimationFrame(f);else{winP=1;draw()}})(t0);
+  confetti(col);
+}
+var fxc,fxx,parts=[],fxOn=false;
+function confetti(col){
+  if(reduce)return;
+  if(!fxc){fxc=document.createElement("canvas");fxc.style.cssText="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50";document.body.appendChild(fxc);fxx=fxc.getContext("2d")}
+  var dpr=Math.min(devicePixelRatio||1,2),W=innerWidth,H=innerHeight;fxc.width=W*dpr;fxc.height=H*dpr;
+  var b=cv.getBoundingClientRect(),ox=b.left+b.width/2,oy=b.top+b.height/2,cols=[col].concat(SET);
+  for(var i=0;i<110;i++){var a=R()*TAU,s=6+R()*12;parts.push({x:ox,y:oy,vx:Math.cos(a)*s,vy:Math.sin(a)*s-6,w:6+R()*7,h:4+R()*5,r:R()*TAU,vr:(R()-.5)*.4,c:cols[Math.floor(R()*cols.length)],life:0})}
+  if(fxOn)return;fxOn=true;var pt=performance.now();
+  (function f(t){var dt=Math.min(32,t-pt)/16;pt=t;fxx.setTransform(dpr,0,0,dpr,0,0);fxx.clearRect(0,0,W,H);
+    parts=parts.filter(function(p){p.life+=dt;p.vy+=.35*dt;p.vx*=Math.pow(.985,dt);p.vy*=Math.pow(.985,dt);p.x+=p.vx*dt;p.y+=p.vy*dt;p.r+=p.vr*dt;if(p.y>H+30||p.life>150)return false;fxx.save();fxx.translate(p.x,p.y);fxx.rotate(p.r);fxx.globalAlpha=Math.min(1,(150-p.life)/40);fxx.fillStyle=p.c;fxx.fillRect(-p.w/2,-p.h/2,p.w,p.h);fxx.restore();return true});
+    if(parts.length)requestAnimationFrame(f);else{fxOn=false;fxx.clearRect(0,0,W,H)}})(pt);
+}
+function sweep(from,dur){
+  if(reduce||spinning)return;
+  var id=++sweeping,t0=performance.now(),end=sweepEnd!==null?sweepEnd:rot;sweepEnd=end;
+  (function f(t){if(spinning||id!==sweeping){if(id===sweeping)sweepEnd=null;return}
+    var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);rot=end+from*(1-e);draw();if(p<1)requestAnimationFrame(f);else sweepEnd=null})(t0);
+}
+function flick(v){
+  if(spinning||items.length<2)return;
+  try{ac=ac||new (window.AudioContext||window.webkitAudioContext)()}catch(e){}
+  setBusy(true);win=-1;var last=idxAt(rot),pt=performance.now();
+  requestAnimationFrame(function f(t){var dt=Math.min(40,t-pt);pt=t;rot+=v*dt;v*=Math.pow(.9988,dt);
+    var i=idxAt(rot);if(i!==last){last=i;tick()}draw();
+    if(Math.abs(v)>.00025)requestAnimationFrame(f);else done()});
+}
+function initAds(){
+  var live=!!ADS.client;
+  document.querySelectorAll(".ad").forEach(function(el){
+    var id=ADS.slots[el.dataset.slot];el.innerHTML="";
+    if(live&&id){
+      el.innerHTML="<small>Advertisement</small>";
+      var ins=document.createElement("ins");ins.className="adsbygoogle";ins.style.display="block";
+      ins.setAttribute("data-ad-client",ADS.client);ins.setAttribute("data-ad-slot",id);
+      ins.setAttribute("data-ad-format","auto");ins.setAttribute("data-full-width-responsive","true");el.appendChild(ins);
+    }else if(ADS.preview){el.innerHTML="<small>Advertisement</small><div class='ph'>Ad space</div>"}
+    else el.hidden=true;
+  });
+  var ch=$("#adChoices");ch.hidden=!(live&&ADS.ownBanner);ch.onclick=showConsent;
+  if(!live)return;
+  var c=null;try{c=localStorage.getItem("whirl.consent")}catch(e){}
+  if(!ADS.ownBanner)loadAds(true);else if(c)loadAds(c==="yes");else showConsent();
+}
+function showConsent(){
+  var old=$("#consent");if(old)old.remove();
+  var d=document.createElement("div");d.id="consent";d.className="consent";d.setAttribute("role","dialog");d.setAttribute("aria-label","Ad choices");
+  d.innerHTML="<span>Whirl is free thanks to ads. Allow personalized ads, or keep them generic?</span>";
+  [["Personalized","yes"],["Generic only","no"]].forEach(function(x){
+    var b=document.createElement("button");b.className="btn";b.type="button";b.textContent=x[0];
+    b.onclick=function(){try{localStorage.setItem("whirl.consent",x[1])}catch(e){}d.remove();loadAds(x[1]==="yes")};d.appendChild(b);
+  });
+  document.body.appendChild(d);
+}
+function loadAds(personal){
+  window.adsbygoogle=window.adsbygoogle||[];
+  if(!personal)window.adsbygoogle.requestNonPersonalizedAds=1;
+  if(!document.getElementById("adsjs")&&!document.querySelector('script[src*="adsbygoogle.js"]')){
+    var s=document.createElement("script");s.id="adsjs";s.async=true;s.crossOrigin="anonymous";
+    s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+encodeURIComponent(ADS.client);document.head.appendChild(s);
+  }
+  document.querySelectorAll("ins.adsbygoogle").forEach(function(i){if(!i.dataset.done){i.dataset.done=1;try{window.adsbygoogle.push({})}catch(e){}}});
+}
+function chime(){
+  if(!$("#snd").checked||!ac)return;
+  try{var t=ac.currentTime;[523.25,659.25,783.99,1046.5].forEach(function(f,i){var o=ac.createOscillator(),g=ac.createGain(),s=t+i*.09;o.type="triangle";o.frequency.value=f;
+    g.gain.setValueAtTime(.0001,s);g.gain.exponentialRampToValueAtTime(.12,s+.01);g.gain.exponentialRampToValueAtTime(.0001,s+.5);
+    o.connect(g);g.connect(ac.destination);o.start(s);o.stop(s+.55)})}catch(e){}
+}
+function layout(){
+  var t=0;items.forEach(function(x){t+=x.wt||1});var a=0;cum=[0];
+  items.forEach(function(x){a+=(x.wt||1)/t*TAU;cum.push(a)});
+  var f=$("#fairOut");if(f)f.hidden=true;
+}
+var NAMES="Red:E53935,Orange:FB8C00,Amber:FFB300,Yellow:FDD835,Lime:C0CA33,Green:43A047,Mint:98E8C1,Teal:00897B,Cyan:00ACC1,Sky blue:4FC3F7,Blue:1E88E5,Navy:1A237E,Indigo:5C6BC0,Violet:7E57C2,Purple:8E24AA,Magenta:D81B9B,Pink:F06292,Hot pink:FF3D81,Blush:F8BBD0,Coral:FF7F6B,Peach:FFCBA4,Salmon:FA8072,Brown:795548,Tan:D2B48C,Cream:FFF3D6,Gray:9E9E9E,Charcoal:37474F,Lavender:CDB4F5,Lilac:C9A0DC,Olive:808000,Gold:FFD54F".split(",").map(function(s){var p=s.split(":"),h=p[1];return{n:p[0],r:parseInt(h.substr(0,2),16),g:parseInt(h.substr(2,2),16),b:parseInt(h.substr(4,2),16)}});
+function cname(hex){var r=parseInt(hex.substr(1,2),16),g=parseInt(hex.substr(3,2),16),b=parseInt(hex.substr(5,2),16),best="",bd=1e9;
+  NAMES.forEach(function(c){var d=(c.r-r)*(c.r-r)*.3+(c.g-g)*(c.g-g)*.59+(c.b-b)*(c.b-b)*.11;if(d<bd){bd=d;best=c.n}});return best}
+function fairness(){
+  if(items.length<2)return;
+  var N=1000,cnt=items.map(function(){return 0});
+  for(var k=0;k<N;k++){var a=R()*TAU;for(var i=0;i<items.length;i++)if(a<cum[i+1]){cnt[i]++;break}}
+  var out=$("#fairOut");out.hidden=false;out.innerHTML="";
+  var intro=document.createElement("p");intro.style.cssText="margin:0 0 8px;font-weight:700";
+  intro.textContent="1,000 spins just now. The dark line marks each item’s expected share.";out.appendChild(intro);
+  var mx=0;items.forEach(function(it,i){mx=Math.max(mx,cnt[i]/N,(cum[i+1]-cum[i])/TAU)});
+  var bars=[];
+  items.forEach(function(it,i){
+    var ex=(cum[i+1]-cum[i])/TAU,ob=cnt[i]/N,row=document.createElement("div");row.className="fr";
+    row.innerHTML="<span class='lb'></span><span class='tr'><i class='bar'></i><i class='ex'></i></span><span class='pc'></span>";
+    row.querySelector(".lb").textContent=it.label;var bar=row.querySelector(".bar");bar.style.background=it.color;
+    row.querySelector(".ex").style.left=(ex/mx*100)+"%";row.querySelector(".pc").textContent=(ob*100).toFixed(1)+"%";
+    out.appendChild(row);bars.push([bar,ob/mx*100]);
+  });
+  requestAnimationFrame(function(){requestAnimationFrame(function(){bars.forEach(function(b){b[0].style.width=b[1]+"%"})})});
+}
+$("#fairBtn").onclick=fairness;
+var store={};try{store=JSON.parse(localStorage.getItem("whirl.saved")||"{}")}catch(e){}
+function persist(){try{localStorage.setItem("whirl.saved",JSON.stringify(store))}catch(e){}}
+function renderSaved(sel){
+  var s=$("#svList"),ks=Object.keys(store);s.innerHTML="";
+  if(!ks.length)s.add(new Option("No saved wheels yet",""));else ks.forEach(function(k){s.add(new Option(k,k))});
+  if(sel&&store[sel]!=null)s.value=sel;$("#svLoad").disabled=$("#svDel").disabled=!ks.length;
+}
+$("#svBtn").onclick=function(){
+  var nm=$("#svName").value.trim()||("Wheel "+(Object.keys(store).length+1));
+  store[nm]=$("#list").value;persist();renderSaved(nm);$("#svName").value="";
+  var b=$("#svBtn");b.textContent="Saved";setTimeout(function(){b.textContent="Save wheel"},1200);
+};
+$("#svLoad").onclick=function(){var v=store[$("#svList").value];if(v==null||spinning)return;$("#list").value=v;build();sweep(-TAU*.35,700)};
+$("#svDel").onclick=function(){delete store[$("#svList").value];persist();renderSaved()};
+renderSaved();
+document.addEventListener("keydown",function(e){
+  if(e.code==="Space"&&!/INPUT|TEXTAREA|SELECT|BUTTON/.test(document.activeElement.tagName)){e.preventDefault();spin()}
+});
+function renderHist(){
+  var h=$("#hist");h.innerHTML="";if(!hist.length)return;
+  hist.forEach(function(x){var c=document.createElement("span");c.className="chip";var i=document.createElement("i");i.style.background=x.color;c.appendChild(i);c.appendChild(document.createTextNode(x.label));h.appendChild(c)});
+  if(!reduce&&h.firstChild.animate)h.firstChild.animate([{transform:"scale(.4)",opacity:0},{transform:"scale(1.15)",opacity:1},{transform:"scale(1)"}],{duration:380,easing:"ease-out"});
+  var cl=document.createElement("button");cl.className="btn";cl.type="button";cl.textContent="Clear history";cl.onclick=function(){hist=[];renderHist()};h.appendChild(cl);
+}
+
+function setMode(m){
+  if(spinning)return;mode=m;
+  document.querySelectorAll(".tabs button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.mode===m)});
+  document.querySelectorAll(".pane").forEach(function(p){p.hidden=p.dataset.pane!==m});
+  build();sweep(-TAU*.35,700);
+}
+document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){setMode(b.dataset.mode)}});
+["#cCount","#palette","#cNew","#nMin","#nMax","#nCount","#nNew","#list"].forEach(function(s){
+  var el=$(s);el.addEventListener(el.tagName==="BUTTON"?"click":"input",function(){if(!spinning){build();if(el.tagName==="BUTTON")sweep(-TAU*.35,700)}})});
+$("#go").onclick=spin;$("#hub").onclick=spin;
+var drag=null,dLast=0;
+function ang(e){var b=cv.getBoundingClientRect();return Math.atan2(e.clientY-b.top-b.height/2,e.clientX-b.left-b.width/2)}
+cv.addEventListener("pointerdown",function(e){if(spinning||items.length<2)return;drag={a:ang(e),t:performance.now(),v:0,moved:0};dLast=idxAt(rot);try{cv.setPointerCapture(e.pointerId)}catch(x){}});
+cv.addEventListener("pointermove",function(e){if(!drag)return;var a=ang(e),d=a-drag.a;if(d>Math.PI)d-=TAU;if(d<-Math.PI)d+=TAU;drag.a=a;
+  var now=performance.now(),dt=Math.max(1,now-drag.t);drag.t=now;drag.v=.6*drag.v+.4*(d/dt);drag.moved+=Math.abs(d);
+  if(drag.moved>.05){sweeping++;sweepEnd=null;win=-1;rot+=d;var i=idxAt(rot);if(i!==dLast){dLast=i;tick()}draw()}});
+function up(){if(!drag)return;var d0=drag;drag=null;
+  if(d0.moved<.05){spin();return}
+  if(Math.abs(d0.v)>.004&&performance.now()-d0.t<120)flick(Math.max(-.05,Math.min(.05,d0.v)))}
+cv.addEventListener("pointerup",up);cv.addEventListener("pointercancel",function(){drag=null});
+window.addEventListener("resize",draw);
+
+var IDEAS=[
+ {t:"What’s for lunch?",d:"Six easy picks",m:"anything",v:["Pizza","Tacos","Sushi","Burgers","Ramen","Salad"]},
+ {t:"Truth or dare",d:"Party game starter",m:"anything",v:["Truth","Dare","Truth","Dare","Wild card","Skip a turn"]},
+ {t:"Yes or no",d:"Settle it fast",m:"anything",v:["Yes","No","Maybe","Ask again later"]},
+ {t:"Who goes first?",d:"Four players",m:"anything",v:["Player 1","Player 2","Player 3","Player 4"]},
+ {t:"Weekend plan",d:"Pick an activity",m:"anything",v:["Hike","Movie night","Cook something new","Visit friends","Do nothing","Board games"]},
+ {t:"Coin flip",d:"Heads or tails",m:"anything",v:["Heads","Tails"]},
+ {t:"Roll a die",d:"Numbers 1 to 6",m:"numbers",a:1,b:6,k:6},
+ {t:"Pick 1 to 100",d:"A random number",m:"numbers",a:1,b:100,k:12},
+ {t:"Lucky draw",d:"Prizes with odds",m:"anything",v:["Grand prize","Free coffee x3","Sticker x5","Try again x8"]}
+];
+var g=$("#ideaGrid");
+IDEAS.forEach(function(x){
+  var b=document.createElement("button");b.type="button";b.className="idea";
+  b.innerHTML="<b></b><span></span>";b.firstChild.textContent=x.t;b.lastChild.textContent=x.d;
+  b.onclick=function(){
+    if(spinning)return;
+    if(x.m==="anything"){$("#list").value=x.v.join("\n")}
+    else{$("#nMin").value=x.a;$("#nMax").value=x.b;$("#nCount").value=x.k}
+    setMode(x.m);location.hash="";document.getElementById("spin").scrollIntoView({behavior:reduce?"auto":"smooth"});
+  };
+  g.appendChild(b);
+});
+
+build();
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(draw);
+sweep(-TAU*.6,1300);initAds();
+})();
+</script>
+</body>
+</html>
